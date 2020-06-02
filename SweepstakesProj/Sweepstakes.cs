@@ -33,7 +33,7 @@ namespace SweepstakesProj
 
             sweepstakes.Add(sweepstakes.Count, contestant);
         }
-        public void PickWinner()
+        public Contestant PickWinner()
         {
             Random random = new Random();
             int index = random.Next(sweepstakes.Count);
@@ -41,7 +41,16 @@ namespace SweepstakesProj
             KeyValuePair<int, Contestant> Winner = sweepstakes.ElementAt(index);
 
             UI.PrintString("The Winner of the" + name + "is" + Winner.Value.firstName + Winner.Value.lastName);
+            return sweepstakes[index];
+            
         }
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            foreach (KeyValuePair<int, Contestant> contestantList in sweepstakes)
+            {
 
+                UI.PrintString("Contestant Registration Number: {0}, First Name: {1},  Last Name: {2} Email: {3}", contestantList.Key, contestantList.Value.firstName, contestantList.Value.lastName, contestantList.Value.email); );
+            }
+        }
     }
 }

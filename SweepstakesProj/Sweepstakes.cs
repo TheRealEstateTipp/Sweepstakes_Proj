@@ -33,6 +33,15 @@ namespace SweepstakesProj
 
             sweepstakes.Add(sweepstakes.Count, contestant);
         }
+        public void PickWinner()
+        {
+            Random random = new Random();
+            int index = random.Next(sweepstakes.Count);
+
+            KeyValuePair<int, Contestant> Winner = sweepstakes.ElementAt(index);
+
+            UI.PrintString("The Winner of the" + name + "is" + Winner.Value.firstName + Winner.Value.lastName);
+        }
 
     }
 }

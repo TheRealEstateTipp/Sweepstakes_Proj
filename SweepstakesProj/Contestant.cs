@@ -20,5 +20,7 @@ namespace SweepstakesProj
             this.email = email;
             this.registrationNumber = registrationNumber;
         }
+
+        
     }
 }

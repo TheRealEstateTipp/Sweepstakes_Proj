@@ -10,7 +10,19 @@ namespace SweepstakesProj
 {
     public class Sweepstakes
     {
-        public string name;
+        string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+
         Dictionary<int, Contestant> sweepstakes;
 
 
@@ -49,7 +61,7 @@ namespace SweepstakesProj
             foreach (KeyValuePair<int, Contestant> contestantList in sweepstakes)
             {
 
-                UI.PrintString("Contestant Registration Number: {0}, First Name: {1},  Last Name: {2} Email: {3}", contestantList.Key, contestantList.Value.firstName, contestantList.Value.lastName, contestantList.Value.email); );
+                UI.PrintString("Contestant Registration Number: {0} First Name: {1}, Last Name: {2} Email: {3}", contestantList.Key, contestantList.Value.firstName, contestantList.Value.lastName, contestantList.Value.email);
             }
         }
     }

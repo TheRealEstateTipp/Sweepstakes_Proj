@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProj
 {
-    class MarketingFirm 
+     class MarketingFirm 
     {
         ISweepstakesManager manager;
 
@@ -26,6 +26,7 @@ namespace SweepstakesProj
             Sweepstakes newSweepstake = new Sweepstakes("newSweepstake");
         }
 
+        
     }
 
 }

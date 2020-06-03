@@ -19,5 +19,12 @@ namespace SweepstakesProj
             string input = Console.ReadLine();
             return input;
         }
+        public static string GetManagerType()
+        {
+            string input = GetUserInput("What type of manager would your firm prefer? Queue? Stack?");
+            return input;
+
+
+        }
     }
 }
